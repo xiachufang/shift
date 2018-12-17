@@ -13,18 +13,10 @@ services:
       - "3000:3000"
     environment:
       - DATABASE_URL=mysql2://root:root@db/shift?pool=30&timeout=5000
-      - INSPECTION_DB_PASSWORD=root
-      - INSPECTION_DB_USER=root
-      - RAILS_ENV=production
-      - RAILS_SERVE_STATIC_FILES=1
       - SECRET_KEY_BASE=some_random_30_char_string
       - SHIFT_ADMINS=cadl,admin,UNKNOWN
-      - SHIFT_LOG_DIR=/var/log/shift/
-      - SHIFT_MYSQL_DEFAULTS_FILE=config/my.cnf
-      - SHIFT_MYSQL_PASSWORD=root
-      - SHIFT_MYSQL_USER=root
-      - SHIFT_PT_OSC_PATH=/usr/bin/pt-online-schema-change
-      - SHIFT_REST_API=http://127.0.0.1:3000/api/v1/
       - SHIFT_STOP_FILE_PATH=/var/lib/shift/control/stop
+      - SHIFT_OSC_MYSQL_PASSWORD=root
+      - SHIFT_OSC_MYSQL_USER=root
     depends_on:
       - db

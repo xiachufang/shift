@@ -29,7 +29,7 @@ COPY ./ui .
 COPY ./ptosc-patch/0001-ptosc-square-changes.patch .
 RUN mkdir -p /var/log/shift
 
-ENV ENVIRONMENT envvar
+ENV ENVIRONMENT=envvar RAILS_ENV=production RAILS_SERVE_STATIC_FILES=1 SHIFT_REST_API=http://127.0.0.1:3000/api/v1/ SHIFT_OSC_MYSQL_DEFAULTS_FILE=config/my.cnf SHIFT_PT_OSC_PATH=/usr/bin/pt-online-schema-change SHIFT_LOG_DIR=/var/log/shift
 
 # BUILD shift-ui
 RUN bundle install

@@ -1,10 +1,10 @@
 # config for the database client
-mysql_user: ${SHIFT_MYSQL_USER}
-mysql_password: ${SHIFT_MYSQL_PASSWORD}
-mysql_cert: ${SHIFT_MYSQL_CERT}
-mysql_key: ${SHIFT_MYSQL_KEY}
-mysql_rootCA: ${SHIFT_MYSQL_ROOTCA}
-mysql_defaults_file: ${SHIFT_MYSQL_DEFAULTS_FILE}
+mysql_user: ${SHIFT_OSC_MYSQL_USER}
+mysql_password: ${SHIFT_OSC_MYSQL_USER}
+mysql_cert: ${SHIFT_OSC_MYSQL_CERT}
+mysql_key: ${SHIFT_OSC_MYSQL_KEY}
+mysql_rootCA: ${SHIFT_OSC_MYSQL_ROOTCA}
+mysql_defaults_file: ${SHIFT_OSC_MYSQL_DEFAULTS_FILE}
 
 # config for the rest client
 rest_api: ${SHIFT_REST_API}
