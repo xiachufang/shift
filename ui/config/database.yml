@@ -1,7 +1,7 @@
 common: &common
   adapter: <%= defined?(JRUBY_VERSION) ? 'jdbcmysql' : 'mysql2' %>
   host:     127.0.0.1
-  pool:     30
+  pool:     10
   timeout:  5000
   username: root
 
