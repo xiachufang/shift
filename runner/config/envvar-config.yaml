@@ -1,6 +1,6 @@
 # config for the database client
 mysql_user: ${SHIFT_OSC_MYSQL_USER}
-mysql_password: ${SHIFT_OSC_MYSQL_USER}
+mysql_password: ${SHIFT_OSC_MYSQL_PASSWORD}
 mysql_cert: ${SHIFT_OSC_MYSQL_CERT}
 mysql_key: ${SHIFT_OSC_MYSQL_KEY}
 mysql_rootCA: ${SHIFT_OSC_MYSQL_ROOTCA}
