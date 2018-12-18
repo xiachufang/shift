@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
   def current_user
     dn = request.headers["x-ssl-client-s-dn"] || ""
     who_pair = dn.split(",").find{|i| i.start_with?("CN=")}
-    who = who_pair ? who_pair.split("=")[1].upcase: "UNKNOWN"
+    who = who_pair ? who_pair.split("=")[1].downcase: "unknown"
 
     is_admin = Rails.configuration.x.admins.include?(who)
     @current_user = {
