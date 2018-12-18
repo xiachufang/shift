@@ -17,6 +17,7 @@ RUN apt-get update && apt-get install -y \
     libio-socket-ssl-perl \
     libterm-readkey-perl \
     libyaml-perl \
+    lsb-core \
     patch \
     perl \
     ruby-dev \
