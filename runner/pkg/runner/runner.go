@@ -157,8 +157,7 @@ func newRunner(configFile string) (*runner, error) {
 	_, err := os.Stat(runner.MysqlDefaultsFile)
 	if !os.IsExist(err) {
 		mysqlCntContent := fmt.Sprintf(
-			"[client]\n"+
-				"user=%v\npassword=%v", runner.MysqlUser, runner.MysqlPassword)
+			"[client]\n"+"user=%v\npassword=%v", runner.MysqlUser, runner.MysqlPassword)
 
 		if runner.MysqlCert != "" {
 			mysqlCntContent = mysqlCntContent + "\n" +

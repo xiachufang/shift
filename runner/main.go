@@ -26,8 +26,6 @@ func main() {
 	}
 
 	configFile = wd + "/config/" + environment + "-config.yaml"
-	os.Stderr.WriteString(environment + "\n")
-	os.Stderr.WriteString(configFile + "\n")
 	err = runner.Start(configFile)
 	if err != nil {
 		log.Fatalf("Error creating migration runner (error: %s).", err)
