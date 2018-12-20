@@ -330,11 +330,11 @@ func (migration *Migration) CleanUp() error {
 	if err != nil {
 		return err
 	}
-	pdTable := TimestampedTable(migTable)
 	if migration.EnableTrash {
+		pdTable := TimestampedTable(migTable)
 		err = MoveToPendingDrops(migration, migTable, pdTable)
 	} else {
-		err = MoveToBlackHole(migration, pdTable)
+		err = MoveToBlackHole(migration, migTable)
 	}
 	if err != nil {
 		return err
