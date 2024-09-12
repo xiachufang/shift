@@ -238,7 +238,7 @@ func (migration *Migration) DirectDrop() error {
 
 // swapTables renames two tables atomically.
 func (migration *Migration) swapTables(table1Source, table1Dest, table2Source, table2Dest string) error {
-	query := "RENAME TABLE " + table1Source + " TO " + table1Dest + ", " + table2Source + " TO " + table2Dest
+	query := "RENAME TABLE `" + table1Source + "` TO `" + table1Dest + "`, `" + table2Source + "` TO `" + table2Dest + "`"
 	return RunWriteQuery(migration, query)
 }
 
